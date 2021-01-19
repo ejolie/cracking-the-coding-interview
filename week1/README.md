@@ -1,8 +1,8 @@
 # Week1 (20.01.18.월)
 
-### 학습한 내용
+## 학습한 내용
 
-#### String vs. StringBuilder vs. StringBuffer
+### String vs. StringBuilder vs. StringBuffer
 
 - StringBuilder
 
@@ -22,7 +22,7 @@
   - https://madplay.github.io/post/difference-between-string-stringbuilder-and-stringbuffer-in-java
   - https://www.journaldev.com/538/string-vs-stringbuffer-vs-stringbuilder
 
-#### String Pool
+### String Pool
 
 - 리터럴마다 스트링 풀에 하나의 카피만 저장 -> "String Interning"
 - String 생성 방법
@@ -59,7 +59,7 @@
     }
     ```
 
-- 위치: Perm 영역(~자바 6) -> Heap 영역(자바 7~)
+- 위치: Perm 영역(자바 6) -> Heap 영역(자바 7)
   - 이점: 스트링 풀의 모든 문자열이 GC의 대상이 될 수 있다.
 - 참고자료
   - https://www.baeldung.com/java-string-pool
