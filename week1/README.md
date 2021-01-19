@@ -66,7 +66,7 @@
   - https://www.nakjunizm.com/2017/07/25/String_Pool/
   - https://medium.com/@joongwon/string-%EC%9D%98-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EC%B0%B0-57af94cbb6bc
 
-### 다음 주까지
+## 다음 주까지
 
 - [ ] IX. 면접 문제 - 1. 자료구조 - 01. 배열과 문자열, 02 연결리스트 읽기
 - [ ] StringBuilder 클래스 기능 구현 및 테스트 코드 작성하기
