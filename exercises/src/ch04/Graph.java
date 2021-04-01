@@ -1,7 +1,8 @@
 package ch04;
 
 public class Graph {
-    private Node[] nodes;
+
+    public Node[] nodes;
 
     public Graph() {
 
@@ -11,11 +12,4 @@ public class Graph {
         this.nodes = nodes;
     }
 
-    public Node[] getNodes() {
-        return nodes;
-    }
-
-    public void setNodes(Node[] nodes) {
-        this.nodes = nodes;
-    }
 }
