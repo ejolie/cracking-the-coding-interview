@@ -18,7 +18,7 @@ public class Q1 {
         B.adjacent = new Node[]{D};
         C.adjacent = new Node[]{A, B};
         D.adjacent = new Node[]{};
-        G.setNodes(new Node[]{A, B, C, D});
+        G.nodes = new Node[]{A, B, C, D};
 
         Q1 q1 = new Q1();
         System.out.println(q1.solution_search(G, A, D));
@@ -33,7 +33,7 @@ public class Q1 {
         }
 
         LinkedList<Node> queue = new LinkedList<>(); // queue
-        for (Node node : G.getNodes()) {
+        for (Node node : G.nodes) {
             node.state = State.Unvisited;
         }
         start.state = State.Visiting;
@@ -60,7 +60,7 @@ public class Q1 {
 
     public boolean doesHavePathBetween_bfs(Graph G, Node start, Node end) {
         Queue<Node> queue = new ArrayDeque<>();
-        Set<Node> visited = new HashSet<>(G.getNodes().length);
+        Set<Node> visited = new HashSet<>(G.nodes.length);
         queue.add(start);
         visited.add(start);
 
@@ -81,7 +81,7 @@ public class Q1 {
 
     public boolean doesHavePathBetween_dfs_iter(Graph G, Node start, Node end) {
         Stack<Node> stack = new Stack<>();
-        Set<Node> visited = new HashSet<>(G.getNodes().length);
+        Set<Node> visited = new HashSet<>(G.nodes.length);
         stack.add(start);
 
         while (!stack.empty()) {
