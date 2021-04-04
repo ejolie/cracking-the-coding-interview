@@ -5,7 +5,7 @@
  1. [배열과 문자열](exercises/src/ch01/README.md)
  2. 연결리스트
  3. 스택과 큐
- 4. 트리와 그래프
+ 4. [트리와 그래프](exercises/src/ch04/README.md)
 
 ### Study
  - [1주차 (21.01.28)](week1/README.md)
