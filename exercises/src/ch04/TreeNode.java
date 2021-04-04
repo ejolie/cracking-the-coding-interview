@@ -1,16 +1,16 @@
 package ch04;
 
-public class MyTreeNode {
+public class TreeNode {
 
     public int value;
-    public MyTreeNode left;
-    public MyTreeNode right;
+    public TreeNode left;
+    public TreeNode right;
 
-    public MyTreeNode(int value) {
+    public TreeNode(int value) {
         this.value = value;
     }
 
-    public MyTreeNode(int value, MyTreeNode left, MyTreeNode right) {
+    public TreeNode(int value, TreeNode left, TreeNode right) {
         this(value);
         this.left = left;
         this.right = right;
