@@ -1,21 +1,23 @@
 package ch04;
 
-public class TreeNode {
+public class MyTreeNode {
 
     public int value;
-    public TreeNode left;
-    public TreeNode right;
+    public MyTreeNode left;
+    public MyTreeNode right;
 
-    public TreeNode(int value) {
+    public MyTreeNode(int value) {
         this.value = value;
+    }
+
+    public MyTreeNode(int value, MyTreeNode left, MyTreeNode right) {
+        this(value);
+        this.left = left;
+        this.right = right;
     }
 
     @Override
     public String toString() {
-        return "BinaryTreeNode{" +
-                "value=" + value +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
+        return String.valueOf(value);
     }
 }
