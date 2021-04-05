@@ -87,10 +87,11 @@ public class MyGraph {
 
         while (!stack.empty()) {
             int v = stack.pop();
-            if (!visited[v]) {
-                visited[v] = true;
-                System.out.println("visited: " + v);
+            if (visited[v]) {
+                continue;
             }
+            visited[v] = true;
+            System.out.println("visited: " + v);
 
             LinkedList<Integer> nodes = neighbors[v];
             for (int i = nodes.size() - 1; i >= 0; i--) {
@@ -103,10 +104,11 @@ public class MyGraph {
 
     // 2.2. DFS(Depth-First Search) recursive ver.
     public void dfs_recursive(boolean[] visited, int v) {
-        if (!visited[v]) {
-            visited[v] = true;
-            System.out.println("visited: " + v);
+        if (visited[v]) {
+            return;
         }
+        visited[v] = true;
+        System.out.println("visited: " + v);
 
         for (int w : neighbors[v]) {
             if (!visited[w]) {
