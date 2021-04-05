@@ -32,8 +32,6 @@ public class MyGraph {
     }
 
     public static void main(String[] args) {
-        int n = 5;
-        MyGraph G = new MyGraph(n);
         int[][] inputs = new int[][]{
             {1, 2},
             {2, 3, 4},
@@ -42,6 +40,9 @@ public class MyGraph {
             {}
         };
 
+        int n = inputs.length;
+        MyGraph G = new MyGraph(n);
+        // add edges
         for (int v = 0; v < n; v++) {
             for (int w : inputs[v]) {
                 G.neighbors[v].add(w);
@@ -50,8 +51,10 @@ public class MyGraph {
 
         System.out.println("BFS");
         G.bfs(0);
+
         System.out.println("DFS - iterative");
         G.dfs_iterative(0);
+
         System.out.println("DFS - recursive");
         G.dfs_recursive(new boolean[n], 0);
     }
@@ -66,11 +69,11 @@ public class MyGraph {
 
         while (!queue.isEmpty()) {
             int v = queue.poll();
-
-            System.out.println("visited: " + v);
+            doSomething(v);
 
             for (int w : neighbors[v]) {
                 if (!visited[w]) {
+                    // visit check
                     visited[w] = true;
                     queue.add(w);
                 }
@@ -90,9 +93,11 @@ public class MyGraph {
             if (visited[v]) {
                 continue;
             }
+            // visit check
             visited[v] = true;
-            System.out.println("visited: " + v);
+            doSomething(v);
 
+            // to synchronize visit order with recursive DFS
             LinkedList<Integer> nodes = neighbors[v];
             for (int i = nodes.size() - 1; i >= 0; i--) {
                 if (!visited[nodes.get(i)]) {
@@ -107,13 +112,18 @@ public class MyGraph {
         if (visited[v]) {
             return;
         }
+        // visit check
         visited[v] = true;
-        System.out.println("visited: " + v);
+        doSomething(v);
 
         for (int w : neighbors[v]) {
             if (!visited[w]) {
                 dfs_recursive(visited, w);
             }
         }
+    }
+
+    private void doSomething(int node) {
+        System.out.println("visited: " + node);
     }
 }
