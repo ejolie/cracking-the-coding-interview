@@ -91,6 +91,7 @@ public class Q3 {
         return result;
     }
 
+    // Method 1. Pre-order traversal
     public Map<Integer, List<TreeNode>> makeLinkedList(TreeNode root) {
         Map<Integer, List<TreeNode>> map = new HashMap<>();
         preOrderTraverse(root, map, 0);

@@ -8,5 +8,6 @@
  4. [트리와 그래프](exercises/src/ch04/README.md)
 
 ### Study
- - [1주차 (21.01.28)](week1/README.md)
-
+ - [1주차 (21.01.28)](study/week1/README.md)
+ - [4주차 (21.03.29)](study/week4/README.md)
+ - [5주차 (21.04.05)](study/week5/README.md)

@@ -27,6 +27,7 @@ public class Q1 {
         System.out.println(q1.doesHavePathBetween_dfs_recur(G, A, D));
     }
 
+    // Solution 1. BFS
     public boolean solution_search(Graph G, Node start, Node end) {
         if (start == end) {
             return true;
@@ -58,6 +59,7 @@ public class Q1 {
         return false;
     }
 
+    // Method 1. BFS
     public boolean doesHavePathBetween_bfs(Graph G, Node start, Node end) {
         Queue<Node> queue = new ArrayDeque<>();
         Set<Node> visited = new HashSet<>(G.nodes.length);
@@ -79,6 +81,7 @@ public class Q1 {
         return false;
     }
 
+    // Method 2. DFS iterative
     public boolean doesHavePathBetween_dfs_iter(Graph G, Node start, Node end) {
         Stack<Node> stack = new Stack<>();
         Set<Node> visited = new HashSet<>(G.nodes.length);
@@ -99,6 +102,7 @@ public class Q1 {
         return true;
     }
 
+    // Method 3. DFS recursive
     Set<Node> visited = new HashSet<>();
     public boolean doesHavePathBetween_dfs_recur(Graph G, Node curr, Node end) {
         visited.add(curr);

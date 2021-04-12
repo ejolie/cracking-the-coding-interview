@@ -21,6 +21,7 @@ public class Q2 {
         inOrderTraversal(result2);
     }
 
+    // Solution 1. Binary Search
     public TreeNode solution_createMinimalBST(int[] arr) {
         return solution_createMinimalBST(arr, 0, arr.length - 1);
     }
@@ -37,6 +38,7 @@ public class Q2 {
         return node;
     }
 
+    // Method 1. Bianry Search
     public TreeNode createMinimalTree(int[] nums) {
         TreeNode root = insertValue(nums, 0, nums.length - 1);
         return root;
